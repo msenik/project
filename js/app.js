@@ -1,4 +1,4 @@
-var module = angular.module('myApp', ["ngAnimate",'duScroll',"countUpModule",'ngRoute'])
+var module = angular.module('myApp', ["ngAnimate",'duScroll',"countUpModule",'ngRoute','ngMap'])
 
 .config(function($routeProvider, $locationProvider) {
   $routeProvider
@@ -19,7 +19,7 @@ var module = angular.module('myApp', ["ngAnimate",'duScroll',"countUpModule",'ng
 })
 
 
-.controller('mainCtrl', ['$scope', '$http', function ($scope, $http) {
+.controller('mainCtrl', ['$scope', '$http','NgMap', function ($scope, $http, NgMap) {
   $scope.news = {};
 
   $http({
@@ -32,6 +32,13 @@ var module = angular.module('myApp', ["ngAnimate",'duScroll',"countUpModule",'ng
     });
   }, function errorHandler(response){
     alert('Error!!! ' + response.statusText);
+  });
+
+  NgMap.getMap().then(function(map) {
+    $scope.showCustomMarker= function(evt) {
+      map.customMarkers.foo.setVisible(true);
+      map.customMarkers.foo.setPosition(this.getPosition());
+    };
   });
 
 }])

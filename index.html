@@ -56,18 +56,27 @@
 
       <!-- Map -->
       <section id="map">
-         <div id="address-popup" class="text-center">
-            <p>Awesome Address 432</p>
-            <p>ourmail@sometype.com</p>
-            <p>+321(0)32 123 343 492</p>
-         </div>
+        <ng-map
+          zoom="15"
+          center="Kyiv, Ukraine" style="height:400px"
+          styles='[{"elementType":"geometry","stylers":[{"color":"#f5f5f5"}]},{"elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"elementType":"labels.text.fill","stylers":[{"color":"#616161"}]},{"elementType":"labels.text.stroke","stylers":[{"color":"#f5f5f5"}]},{"featureType":"administrative.land_parcel","elementType":"labels.text.fill","stylers":[{"color":"#bdbdbd"}]},{"featureType":"poi","elementType":"geometry","stylers":[{"color":"#eeeeee"}]},{"featureType":"poi","elementType":"labels.text.fill","stylers":[{"color":"#757575"}]},{"featureType":"poi.park","elementType":"geometry","stylers":[{"color":"#e5e5e5"}]},{"featureType":"poi.park","elementType":"labels.text.fill","stylers":[{"color":"#9e9e9e"}]},{"featureType":"road","elementType":"geometry","stylers":[{"color":"#ffffff"}]},{"featureType":"road.arterial","elementType":"labels.text.fill","stylers":[{"color":"#757575"}]},{"featureType":"road.highway","elementType":"geometry","stylers":[{"color":"#dadada"}]},{"featureType":"road.highway","elementType":"labels.text.fill","stylers":[{"color":"#616161"}]},{"featureType":"road.local","elementType":"labels.text.fill","stylers":[{"color":"#9e9e9e"}]},{"featureType":"transit.line","elementType":"geometry","stylers":[{"color":"#e5e5e5"}]},{"featureType":"transit.station","elementType":"geometry","stylers":[{"color":"#eeeeee"}]},{"featureType":"water","elementType":"geometry","stylers":[{"color":"#c9c9c9"}]},{"featureType":"water","elementType":"geometry.fill","stylers":[{"color":"#01ddfb"}]},{"featureType":"water","elementType":"labels.text.fill","stylers":[{"color":"#9e9e9e"}]}]'
+          on-center-changed="centerCustomMarker()">
+
+          <custom-marker id="foo" position="Kyiv, Ukraine">
+            <div id="address-popup" class="text-center">
+               <p>Awesome Address 432</p>
+               <p>ourmail@sometype.com</p>
+               <p>+321(0)32 123 343 492</p>
+            </div>
+          </custom-marker>
+        </ng-map>
       </section>
 
       <!-- Footer -->
       <footer id="footer" class="text-center">
          <a href="#home" du-smooth-scroll><img src="img/up-button.svg" width="20" height="20"></a>© 2017 - <span>Kat</span> All Right Reserved
       </footer>
-      
+
       <!-- Scripts -->
       <script src="js/jquery.js"></script>
       <script src="js/bootstrap.min.js"></script>
@@ -79,6 +88,8 @@
       <!--https://github.com/inorganik/countUp.js/-->
       <script src="js/countUp.js"></script>
       <script src="js/angular-countUp.js"></script>
+      <script src="http://maps.google.com/maps/api/js"></script>
+      <script src="js/ng-map.min.js"></script>
       <script src="js/app.js"></script>
    </body>
 </html>
