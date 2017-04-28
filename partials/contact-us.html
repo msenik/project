@@ -1,0 +1,63 @@
+<section id="contact-us">
+  <div class="container text-center">
+    <div class="row">
+      <div class="caption-block col-md-8 col-md-offset-2">
+        <h2>Contact Us</h2>
+        <hr>
+        <p>Eum cu tantas legere complectitur, hinc utamur ea eam. Eum patrioque mnesarchum eu,
+          diam erant convenire et vis. Et essent evertitur sea, vis cu ubique referrentur, sed eu dicant expetendis.
+        </p>
+      </div>
+    </div>
+
+    <form role="form" novalidate name="msgForm" ng-submit="msgForm.$valid && submitHandler()">
+      <div class="row">
+        <div class="col-sm-6 col-md-4 col-md-offset-2">
+          <input type="text"
+            placeholder="Your name here"
+            name="clientName"
+            ng-model="message.clientName"
+            pattern="[A-Za-z]+"
+            ng-trim="false"
+            required>
+          <p class="error" ng-show="msgForm.clientName.$invalid && msgForm.clientName.$dirty">
+            {{showError(msgForm.clientName)}}
+          </p>
+        </div>
+        <div class="col-sm-6 col-md-4">
+          <input type="text"
+           placeholder="Your mail here"
+           name="clientEmail"
+           ng-model="message.clientEmail"
+           ng-trim="false"
+           pattern="^[a-zA-Z0-9_.+]+@[a-zA-Z0-9]+\.[a-zA-Z0-9.]+$"
+           required>
+          <p class="error" ng-show="msgForm.clientEmail.$invalid && msgForm.clientEmail.$dirty">
+            {{showError(msgForm.clientEmail)}}
+          </p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-sm-12 col-md-8 col-md-offset-2" id="clientMessageContainer">
+          <input type="text"
+           placeholder="Your message here"
+           name="clientMessage"
+           ng-model="message.clientMessage"
+           pattern=".{20,}"
+           required>
+          <p class="error" ng-show="msgForm.clientMessage.$invalid && msgForm.clientMessage.$dirty">
+            {{showError(msgForm.clientMessage)}}
+          </p>
+        </div>
+      </div>
+
+      <div class="row text-right">
+        <div class="col-sm-12 col-md-8 col-md-offset-2">
+          <button type="submit">Send message</button>
+        </div>
+      </div>
+    </form>
+    
+  </div>
+</section>

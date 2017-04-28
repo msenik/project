@@ -1,0 +1,44 @@
+<section class="container" id="services-top">
+  <div>
+    <div class="row text-center">
+          <div class="col-sm-3 tab" ng-repeat="tab in tabs" ng-click="selectTab($index)">
+            <img src="{{'img/'+tab.img}}">
+            <h4>{{tab.caption}}</h4>
+            <hr>
+          </div>
+    </div>
+
+    <div class="row text-left" ng-switch on="tabIndex">
+      <div class="tab-content col-md-10 col-md-offset-1">
+        <div class="animate-switch" ng-switch-when="tab_0">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute i
+          rure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+          non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </div>
+
+        <div class="animate-switch" ng-switch-when="tab_1">
+          Nam mauris mauris, ultricies quis ornare a, ornare a eros. Aenean vel varius orci. Mauris quis metus placerat,
+          laoreet metus sit amet, pulvinar risus.
+          Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+          Vivamus eget est ut tellus scelerisque imperdiet.
+        </div>
+
+        <div class="animate-switch" ng-switch-when="tab_2">
+          Nunc ultricies suscipit lectus eget posuere. Suspendisse feugiat semper cursus.
+          Donec in semper neque, ac dictum ante. Quisque vitae ex eget leo varius bibendum.
+          Nullam est sapien, interdum at accumsan et, gravida vitae augue. Ut eleifend urna purus,
+          vitae hendrerit neque pellentesque mattis.
+        </div>
+
+        <div class="animate-switch" ng-switch-when="tab_3">
+          Aenean a velit at dolor aliquet tincidunt ut vel felis. Ut vel quam vitae justo tempus eleifend.
+          Integer diam felis, rutrum eu tincidunt molestie, elementum eget lectus.
+          Vivamus eget tincidunt urna, eget tincidunt velit.
+          Proin porttitor tellus velit, eu venenatis est ultricies accumsan.
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>

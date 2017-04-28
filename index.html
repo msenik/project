@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+   <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <title>Landing Page - Start Bootstrap Theme</title>
+      <link href="css/bootstrap.min.css" rel="stylesheet">
+      <link href="css/landing-page.css" rel="stylesheet">
+      <link href="css/media.css" rel="stylesheet">
+      <base href="/">
+   </head>
+   <body ng-controller="mainCtrl">
+
+      <!-- Navbar -->
+      <div navigation-bar>Navigation</div>
+
+      <!-- Header -->
+      <div id="home" class="intro-header">
+         <div class="container">
+            <div class="row">
+               <div class="col-lg-12">
+                  <div class="intro-message">
+                     <h1>WE MAKE WEBSITES</h1>
+                     <a href="#portfolio" du-smooth-scroll class="btn btn-default btn-lg theme-btn">
+                     <span class="network-name">START TOUR</span>
+                     </a>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+
+      <!-- Services -->
+      <div services-tabs></div>
+      <div services-bottom></div>
+
+      <!-- Portfolio -->
+      <div portfolio></div>
+
+      <!-- Stats -->
+      <div stats></div>
+
+      <!-- About -->
+      <div about></div>
+
+      <!-- Nevs -->
+      <div id="news-container">
+         <div ng-view></div>
+      </div>
+
+      <!-- Contact-us -->
+      <div contact-us></div>
+
+      <!-- Map -->
+      <section id="map">
+         <div id="address-popup" class="text-center">
+            <p>Awesome Address 432</p>
+            <p>ourmail@sometype.com</p>
+            <p>+321(0)32 123 343 492</p>
+         </div>
+      </section>
+
+      <!-- Footer -->
+      <footer id="footer" class="text-center">
+         <a href="#home" du-smooth-scroll><img src="img/up-button.svg" width="20" height="20"></a>© 2017 - <span>Kat</span> All Right Reserved
+      </footer>
+      
+      <!-- Scripts -->
+      <script src="js/jquery.js"></script>
+      <script src="js/bootstrap.min.js"></script>
+      <script src="js/angular.js"></script>
+      <script src="js/angular-animate.js"></script>
+      <script src="js/angular_route.js"></script>
+      <!--https://github.com/oblador/angular-scroll-->
+      <script src="js/angular-scroll.min.js"></script>
+      <!--https://github.com/inorganik/countUp.js/-->
+      <script src="js/countUp.js"></script>
+      <script src="js/angular-countUp.js"></script>
+      <script src="js/app.js"></script>
+   </body>
+</html>

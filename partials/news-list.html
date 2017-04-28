@@ -1,0 +1,25 @@
+<!-- Nevs -->
+  <section id="news">
+    <div class="container text-center">
+      <div class="row">
+        <div class="caption-block col-md-8 col-md-offset-2">
+          <h2>Check our news</h2>
+          <hr>
+          <p>Eum cu tantas legere complectitur, hinc utamur ea eam. Eum patrioque mnesarchum eu,
+            diam erant convenire et vis. Et essent evertitur sea, vis cu ubique referrentur, sed eu dicant expetendis.
+          </p>
+        </div>
+      </div>
+
+      <div class="row news-item" ng-repeat="item in news">
+        <div class="col-xs-3 col-sm-2 col-md-1 col-md-offset-2  news-date">
+          <div class="news-day">{{item.date | date:'dd'}}</div>
+          <div class="news-month">{{item.date | date:'MMMM'}}</div>
+        </div>
+        <div class="col-xs-9 col-sm-10 col-md-7 news-caption text-left">
+          <p>{{item.text}}</p>
+          <a href="/{{item.id}}">Read more</a>
+        </div>
+      </div>
+    </div>
+  </section>

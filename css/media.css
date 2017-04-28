@@ -1,0 +1,45 @@
+@media (max-width: 1280px){
+#portfolio .portfolio-photos li {
+      width: 25%;
+  }
+}
+@media (max-width: 992px){
+  .person-card:nth-child(3n){
+    clear:both;
+  }
+}
+@media (max-width: 768px){
+  #portfolio .portfolio-photos li {
+      width: 50%;
+  }
+  .news-caption a{
+    padding-right: 15px;
+  }
+  #clientMessageContainer{
+    margin-top: 0;
+  }
+  #contact-us input{
+    margin-top: 50px;
+  }
+
+  #clientMessageContainer input{
+    margin-bottom: 0;
+  }
+}
+
+@media (max-width: 480px){
+  .person-card {
+      width: 100%;
+  }
+  #portfolio .portfolio-photos li {
+      width: 100%;
+  }
+  #address-popup{
+    max-width: 300px;
+  }
+}
+
+
+@media (max-width: 360px){
+
+}

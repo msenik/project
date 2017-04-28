@@ -1,0 +1,26 @@
+<section id="news-item">
+  <div class="container text-center">
+    <a href="/" id="cancel-btn"><img src="img/cancel.svg" width="20" height="20"></img></a>
+    <div class="row">
+      <div class="caption-block col-lg-12">
+        <h4>{{newsCaption}}</h4>
+        <hr>
+        <div class=news-date>{{newsDate | date:'dd MMMM yyyy'}}</div>
+        <div class="news-item-content text-left" ng-switch on="newsId">
+          <div ng-switch-when="1" >
+            <ng-include src="'partials/news/news_1.html'"></ng-include>
+          </div>
+          <div ng-switch-when="2" >
+            <ng-include src="'partials/news/news_2.html'"></ng-include>
+          </div>
+          <div ng-switch-when="3" >
+            <ng-include src="'partials/news/news_3.html'"></ng-include>
+          </div>
+          <div ng-switch-default>
+            <ng-include src="'partials/news/news_1.html'"></ng-include>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,16 @@
+<!-- Stats -->
+<section id="stats">
+  <a href="#stats" du-scrollspy offset="500"></a>
+  <div class="container">
+    <div class="row text-center">
+      <div class="col-sm-3" ng-repeat="item in achievement">
+        <img src="img/{{item.img}}">
+        <h3 count-up end-val="item.count"
+          scroll-spy-event="duScrollspy:becameActive"
+          duration="3"
+          options="{separator : ' '}"></h3>
+        <p>{{item.caption}}</p>
+      </div>
+    </div>
+  </div>
+</section>

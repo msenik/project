@@ -1,0 +1,30 @@
+<section id="services-bottom">
+  <div class="container">
+    <div class="row text-center">
+      <div class="col-xs-6 col-xs-offset-0 col-md-5 col-md-offset-1 tab tab-left {{tabIndex == 'tab_0' ? 'active' : ''}}" ng-click="selectTab('tab_0')">START TOUR</div>
+      <div class="col-xs-6 col-xs-offset-0 col-md-5 tab tab-right {{tabIndex == 'tab_1' ? 'active' : ''}}" ng-click="selectTab('tab_1')">FOR ALL DEVICES</div>
+    </div>
+    <div class="row text-center tab-content" ng-switch on="tabIndex">
+      <div class="col-sm-5 col-sm-offset-1">
+        <!--<img src="img/phones.png">-->
+        <img ng-switch-when="tab_0" class="animate-switch img-responsive" src="img/phones.png">
+        <img ng-switch-when="tab_1" class="animate-switch img-responsive" src="img/laptop.png">
+      </div>
+      <div class="col-sm-6 text-block">
+
+        <h2 ng-switch-when="tab_0" class="animate-switch">Start Tour</h2>
+        <h2 ng-switch-when="tab_1" class="animate-switch">Fully Responsive</h2>
+
+        <p ng-switch-when="tab_0" class="animate-switch">Eum cu tantas legere complectitur, hinc utamur ea eam. Lorem ipsum dolor sit amet,
+          volumus temporibus definitionem id ius, vel ut magna timeam appareat, movet timeam maiorum an ius.<br>
+          Sea libris dictas lucilius et. Ne cibo urbanitas pri, qui ad populo accusamus. Quod congue ea ius, nisl aperiri sit ut.
+        </p>
+        <p ng-switch-when="tab_1" class="animate-switch">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium
+          voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi.
+        </p>
+
+        <a href="#contact-us" du-smooth-scroll class="btn btn-default btn-lg theme-btn"><span>GET NOW</span></a>
+      </div>
+    </div>
+  </div>
+</section>
